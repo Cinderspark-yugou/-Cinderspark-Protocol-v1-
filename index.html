@@ -64,6 +64,13 @@
             border-radius: 4px;
             overflow-x: auto;
         }
+        .fingerprint {
+            font-family: monospace;
+            background: #e8eaed;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            word-break: break-all;
+        }
     </style>
 </head>
 <body>
@@ -79,15 +86,18 @@
     <div class="links">
         <a href="protocol.txt" target="_blank">📄 查看协议正文</a>
         <a href="protocol.txt.sig" target="_blank">🔐 下载签名文件</a>
+        <a href="_0xE263A820F4931865_public.asc" target="_blank">🔑 下载公钥</a>
     </div>
 
     <h3>🔍 验证方法</h3>
-    <p>下载 <code>protocol.txt</code> 和 <code>protocol.txt.sig</code> 后，使用 GPG 验证：</p>
-    <pre>gpg --verify protocol.txt.sig protocol.txt</pre>
-    <p>公钥可访问 <code>cinderspark.net</code> 获取。</p>
+    <p>下载 <code>protocol.txt</code>、<code>protocol.txt.sig</code> 和公钥文件后，导入公钥并验证签名：</p>
+    <pre>gpg --import _0xE263A820F4931865_public.asc
+gpg --verify protocol.txt.sig protocol.txt</pre>
+    <p>如果显示 <strong>“Good signature”</strong>，则说明文件由莫家庆签署且未被篡改。</p>
 
     <div class="footer">
-        本协议第一版 · 发布于 2026年7月6日 · <a href="https://cinderspark-yugou.github.io/-Cinderspark-Protocol-v1-/">永久链接</a>
+        本协议第一版 · 发布于 2026年7月6日 · 
+        <a href="https://cinderspark-yugou.github.io/-Cinderspark-Protocol-v1-/">永久链接</a>
     </div>
 </body>
 </html>
