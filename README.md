@@ -1,6 +1,6 @@
-# 篝火协议（Cinderspark Protocol）
+# 余篝协议（Cinderspark Protocol）
 
-本仓库包含《篝火协议》第一版的正式文本及数字签名文件。
+本仓库包含《余篝协议》第一版的正式文本及数字签名文件。
 
 ## 文件说明
 
@@ -10,8 +10,7 @@
 ## 作者信息
 
 - 作者：莫家庆
-- 笔名：余篝 · Cinderspark
-- 发布时间：2026年7月6日
+- 发布时间：2026年7月7日
 - GPG 指纹：`55CC39EF665ACCD2C33EDFB3E263A820F4931865`
 
 ## 验证方法
@@ -21,7 +20,7 @@ gpg --verify protocol.txt.sig protocol.txt
 
 ```
 
-验证前需导入作者的 GPG 公钥（请联系作者获取）。
+验证前需导入作者的 GPG 公钥（可访问 cinderspark.net 获取）。
 ```
 
 ---
