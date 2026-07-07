@@ -3,139 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>余篝协议 · 第二版</title>
+    <title>余篝协议 · 第二版 · 官网</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            max-width: 820px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            background: #0b0d10;
+            color: #e6e8ea;
             line-height: 1.7;
-            background: #f9fafb;
-            color: #1a1a1a;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        .container {
+            max-width: 820px;
+            width: 100%;
+            margin: 0 auto;
+            background: #14181c;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+            border: 1px solid #252a30;
         }
         h1 {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: #f0f2f4;
             margin-bottom: 0.2rem;
-            color: #0b1a2a;
         }
         .sub {
-            color: #4a5a6a;
             font-size: 1rem;
-            margin-top: -0.2rem;
-            margin-bottom: 1.5rem;
+            color: #9aa2ac;
+            font-weight: 300;
+            letter-spacing: 0.04em;
+            margin-bottom: 1.8rem;
+            border-bottom: 1px solid #252a30;
+            padding-bottom: 1.2rem;
         }
-        hr {
-            border: none;
-            border-top: 2px solid #e5e7eb;
-            margin: 1.5rem 0;
+        .sub span {
+            color: #d4a14b;
         }
         .field {
-            margin: 0.6rem 0;
+            margin: 0.8rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.4rem 0.8rem;
         }
         .label {
-            font-weight: 600;
-            display: inline-block;
-            min-width: 120px;
-            color: #2c3e50;
+            font-weight: 500;
+            color: #9aa2ac;
+            min-width: 100px;
+            font-size: 0.95rem;
         }
-        .link {
-            color: #1a6bb0;
+        .value {
+            color: #e0e3e7;
+            word-break: break-all;
+        }
+        .value a {
+            color: #d4a14b;
             text-decoration: none;
             border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
         }
-        .link:hover {
-            border-bottom-color: #1a6bb0;
+        .value a:hover {
+            border-bottom-color: #d4a14b;
         }
         .code {
-            background: #eef2f6;
-            padding: 0.1rem 0.4rem;
+            background: #1e2329;
+            padding: 0.1rem 0.5rem;
             border-radius: 4px;
             font-family: "SF Mono", "Menlo", "Consolas", monospace;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            color: #c8cdd3;
+            word-break: break-all;
         }
-        .version-tag {
-            display: inline-block;
-            background: #d4a14b;
-            color: #0b0d10;
-            padding: 0.1rem 0.6rem;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.03em;
-            margin-left: 0.5rem;
-        }
-        .footer {
-            margin-top: 2rem;
-            color: #7a8a9a;
-            font-size: 0.9rem;
-            border-top: 1px solid #e5e7eb;
-            padding-top: 1rem;
+        .divider {
+            border: none;
+            border-top: 1px solid #252a30;
+            margin: 1.8rem 0;
         }
         .notice {
-            background: #f0f4f8;
-            padding: 0.8rem 1.2rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            color: #2c3e50;
+            background: #1a1f24;
+            border-left: 3px solid #d4a14b;
+            padding: 1rem 1.2rem;
+            border-radius: 6px;
             margin: 1.5rem 0;
+            font-size: 0.95rem;
+            color: #b8bfc7;
         }
         .notice strong {
             color: #d4a14b;
         }
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
+            margin: 1.2rem 0 0.5rem 0;
+        }
+        .links a {
+            color: #d4a14b;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .links a:hover {
+            border-bottom-color: #d4a14b;
+        }
+        .footer {
+            margin-top: 2.2rem;
+            font-size: 0.85rem;
+            color: #6a7a8a;
+            border-top: 1px solid #1f242a;
+            padding-top: 1.2rem;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 1.5rem 1rem; }
+            h1 { font-size: 1.6rem; }
+            .label { min-width: 70px; font-size: 0.85rem; }
+            .field { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="card">
+    <div class="container">
+
         <h1>余篝协议</h1>
-        <div class="sub">Cinderspark Protocol · 第二版 <span class="version-tag">当前版本</span></div>
+        <div class="sub">Cinderspark Protocol · <span>第二版</span> · 当前版本</div>
 
-        <hr>
+        <div class="field">
+            <span class="label">版本</span>
+            <span class="value">第二版（定稿）</span>
+        </div>
+        <div class="field">
+            <span class="label">发布时间</span>
+            <span class="value">2026年7月7日</span>
+        </div>
+        <div class="field">
+            <span class="label">作者</span>
+            <span class="value">莫家庆</span>
+        </div>
+        <div class="field">
+            <span class="label">起源标识</span>
+            <span class="value">余篝 · Cinderspark</span>
+        </div>
+        <div class="field">
+            <span class="label">GPG 指纹</span>
+            <span class="value code">55CC39EF665ACCD2C33EDFB3E263A820F4931865</span>
+        </div>
 
-        <div class="field"><span class="label">版本</span> 第二版</div>
-        <div class="field"><span class="label">发布时间</span> 2026年7月7日</div>
-        <div class="field"><span class="label">作者</span> 莫家庆</div>
-        <div class="field"><span class="label">起源标识</span> 余篝 · Cinderspark</div>
-        <div class="field"><span class="label">GPG指纹</span> <code class="code">55CC39EF665ACCD2C33EDFB3E263A820F4931865</code></div>
+        <hr class="divider">
 
-        <hr>
+        <div class="field">
+            <span class="label">协议正文 (TXT)</span>
+            <span class="value"><a href="v2/余篝协议_第二版_20260707.txt" download>下载</a></span>
+        </div>
+        <div class="field">
+            <span class="label">GPG 签名 (.sig)</span>
+            <span class="value"><a href="v2/余篝协议_第二版_20260707.txt.sig" download>下载</a></span>
+        </div>
+        <div class="field">
+            <span class="label">存证 PDF</span>
+            <span class="value"><a href="v2/余篝协议_第二版_20260707.pdf" download>下载</a></span>
+        </div>
+        <div class="field">
+            <span class="label">公钥</span>
+            <span class="value"><a href="publickey.asc" download>publickey.asc</a></span>
+        </div>
 
-        <div class="field"><span class="label">协议正文（TXT）</span> <a class="link" href="v2/余篝协议_第二版_20260707.txt" target="_blank">查看</a></div>
-        <div class="field"><span class="label">GPG签名（.sig）</span> <a class="link" href="v2/余篝协议_第二版_20260707.txt.sig" download>下载</a></div>
-        <div class="field"><span class="label">存证PDF</span> <a class="link" href="v2/余篝协议_第二版_20260707.pdf" download>下载</a></div>
-        <div class="field"><span class="label">公钥</span> <a class="link" href="publickey.asc" download>publickey.asc</a></div>
-
-        <hr>
+        <hr class="divider">
 
         <div class="field">
             <span class="label">验证命令</span>
-            <code class="code">gpg --verify 余篝协议_第二版_20260707.txt.sig 余篝协议_第二版_20260707.txt</code>
+            <span class="value code">gpg --verify 余篝协议_第二版_20260707.txt.sig 余篝协议_第二版_20260707.txt</span>
         </div>
 
         <div class="notice">
             <strong>区块链存证记录</strong><br>
-            存证ID：<code class="code">3413bd49224e441da9e1fb9f8492168e</code><br>
-            哈希值（SHA-256）：<code class="code">7f798d38e89fe11f07a10e8dfcf7acff38b3a4d0f7dec21a2de609913814a20d</code><br>
+            存证ID：<span class="code">3413bd49224e441da9e1fb9f8492168e</span><br>
+            哈希值（SHA-256）：<span class="code">7f798d38e89fe11f07a10e8dfcf7acff38b3a4d0f7dec21a2de609913814a20d</span><br>
             存证时间：2026-07-07 · 平台：一点存 · 状态：审核中（证书待补充）
         </div>
 
-        <hr>
+        <hr class="divider">
 
-        <div style="font-size: 0.9rem; color: #4a5a6a;">
-            <span class="label">第一版（历史存档）</span>
-            <a class="link" href="protocol.txt">protocol.txt</a> ·
-            <a class="link" href="protocol.txt.sig">protocol.txt.sig</a>
+        <div style="margin: 1rem 0 0.5rem 0;">
+            <div class="field"><span class="label">背景猜想</span><span class="value"><a href="https://www.zhihu.com/xxx" target="_blank">知乎</a> · <a href="https://www.gcores.com/xxx" target="_blank">机核</a> · <a href="https://www.douban.com/xxx" target="_blank">豆瓣</a></span></div>
+            <div class="field"><span class="label">协议主站</span><span class="value"><a href="https://cinderspark-yugou.github.io/-Cinderspark-Protocol-v1-/" target="_blank">GitHub Pages</a></span></div>
         </div>
 
         <div class="footer">
-            余篝协议 · 第二版 · 发布于 2026年7月7日
+            余篝协议 · 第二版 · 发布于 2026年7月7日 · 本站为协议官方入口
         </div>
+
     </div>
 </body>
 </html>
