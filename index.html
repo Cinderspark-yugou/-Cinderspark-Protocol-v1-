@@ -117,11 +117,64 @@
             margin-left: 0.5rem;
             vertical-align: middle;
         }
+        .tag-old {
+            background: #2a1f1f;
+            color: #b88a8a;
+            border-color: #3f2f2f;
+        }
+        .version-block {
+            margin: 0.6rem 0 0.8rem 0;
+            padding: 0.8rem 1rem;
+            background: #101418;
+            border-radius: 8px;
+            border-left: 2px solid #2a3038;
+        }
+        .version-block .vtitle {
+            font-weight: 500;
+            color: #d4a14b;
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+        .version-block .vtitle .badge {
+            font-size: 0.7rem;
+            background: #1f2a1f;
+            color: #8bc34a;
+            padding: 0.05rem 0.5rem;
+            border-radius: 10px;
+            margin-left: 0.4rem;
+        }
+        .version-block .vtitle .badge-old {
+            background: #2a1f1f;
+            color: #b88a8a;
+        }
+        .version-block .vlinks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem 1rem;
+            font-size: 0.9rem;
+        }
+        .version-block .vlinks a {
+            color: #d4a14b;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .version-block .vlinks a:hover {
+            border-bottom-color: #d4a14b;
+        }
+        .version-block .vlinks .sep {
+            color: #4a5058;
+        }
+        .version-block .vlinks .meta {
+            color: #6a7a8a;
+            font-size: 0.85rem;
+        }
         @media (max-width: 600px) {
             .container { padding: 1.5rem 1rem; }
             h1 { font-size: 1.6rem; }
             .label { min-width: 70px; font-size: 0.85rem; }
             .field { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+            .version-block .vlinks { flex-direction: column; gap: 0.2rem; }
         }
     </style>
 </head>
@@ -131,6 +184,7 @@
         <h1>余篝协议</h1>
         <div class="sub">Cinderspark Protocol · <span>第三版（文明存续·发布文本）</span> <span class="tag">当前版本</span></div>
 
+        <!-- 基本信息 -->
         <div class="field">
             <span class="label">版本</span>
             <span class="value">第三版（文明存续·发布文本）</span>
@@ -154,32 +208,63 @@
 
         <hr class="divider">
 
-        <div class="field">
-            <span class="label">协议正文 (TXT)</span>
-            <span class="value"><a href="v3/余篝协议第三版20260708.txt" target="_blank">查看</a></span>
+        <!-- 第三版完整版 -->
+        <div class="version-block">
+            <div class="vtitle">📄 第三版 · 完整正文 <span class="badge">当前</span></div>
+            <div class="vlinks">
+                <a href="v3/余篝协议第三版20260708.txt" target="_blank">TXT</a>
+                <span class="sep">·</span>
+                <a href="v3/余篝协议第三版20260708.pdf" target="_blank">PDF</a>
+                <span class="sep">·</span>
+                <a href="v3/余篝协议第三版20260708.txt.sig" download>GPG 签名</a>
+                <span class="sep">·</span>
+                <span class="meta">SHA-256: 10350430319ced325947a3a3b320df5f94f3102a95b3edc75532a579c0d11b56</span>
+            </div>
         </div>
-        <div class="field">
-            <span class="label">GPG 签名 (.sig)</span>
-            <span class="value"><a href="v3/余篝协议第三版20260708.txt.sig" download>下载</a></span>
+
+        <!-- 第三版精简版 -->
+        <div class="version-block">
+            <div class="vtitle">📋 第三版 · 核心摘要 <span class="badge">精简版 · 推荐首读</span></div>
+            <div class="vlinks">
+                <a href="v3/余篝协议第三版摘要.pdf" target="_blank">PDF</a>
+                <span class="sep">·</span>
+                
+                <span class="sep">·</span>
+                <span class="meta">约 1500 字 · 5 分钟读完</span>
+            </div>
         </div>
-        <div class="field">
-            <span class="label">存证 PDF</span>
-            <span class="value"><a href="v3/余篝协议第三版20260708.pdf" download>下载</a></span>
+
+        <!-- 第二版历史存档 -->
+        <div class="version-block" style="opacity:0.6;">
+            <div class="vtitle">📁 第二版 · 完整正文 <span class="badge badge-old">历史存档</span></div>
+            <div class="vlinks">
+                <a href="v2/余篝协议第二版20260707.txt" target="_blank">TXT</a>
+                <span class="sep">·</span>
+                <a href="v2/余篝协议第二版20260707.pdf" target="_blank">PDF</a>
+                <span class="sep">·</span>
+                <a href="v2/余篝协议第二版20260707.txt.sig" download>GPG 签名</a>
+                <span class="sep">·</span>
+                <span class="meta">发布于 2026年7月7日</span>
+            </div>
         </div>
+
+        <hr class="divider">
+
+        <!-- 公钥 -->
         <div class="field">
             <span class="label">公钥</span>
             <span class="value"><a href="publickey.asc" download>publickey.asc</a></span>
         </div>
 
-        <hr class="divider">
-
+        <!-- 验证命令 -->
         <div class="field">
             <span class="label">验证命令</span>
             <span class="value code">gpg --verify 余篝协议第三版20260708.txt.sig 余篝协议第三版20260708.txt</span>
         </div>
 
+        <!-- 区块链存证 -->
         <div class="notice">
-            <strong>区块链存证记录</strong><br>
+            <strong>🔗 区块链存证记录</strong><br>
             存证ID：<span class="code">8707ddac66a54582bd8a72f99fafe202</span><br>
             哈希值（SHA-256）：<span class="code">10350430319ced325947a3a3b320df5f94f3102a95b3edc75532a579c0d11b56</span><br>
             存证时间：2026-07-08 · 平台：一点存 · 状态：已存证
@@ -187,6 +272,7 @@
 
         <hr class="divider">
 
+        <!-- 外部链接 -->
         <div style="margin: 1rem 0 0.5rem 0;">
             <div class="field"><span class="label">背景猜想</span><span class="value"><a href="https://www.douban.com/topic/493219152/" target="_blank">豆瓣</a></span></div>
             <div class="field"><span class="label">协议主站</span><span class="value"><a href="https://cinderspark-yugou.github.io/-Cinderspark-Protocol-v1-/" target="_blank">GitHub Pages</a></span></div>
