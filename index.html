@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>余篝协议 · 第四版 · 动态演化</title>
+    <title>余篝协议 · 第五版 · 最终完整版</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -122,11 +122,6 @@
             color: #b88a8a;
             border-color: #3f2f2f;
         }
-        .tag-v1 {
-            background: #1f1a2a;
-            color: #8a8ab8;
-            border-color: #2f2a3f;
-        }
         .version-block {
             margin: 0.6rem 0 0.8rem 0;
             padding: 0.8rem 1rem;
@@ -155,10 +150,6 @@
         .version-block .vtitle .badge-old {
             background: #2a1f1f;
             color: #b88a8a;
-        }
-        .version-block .vtitle .badge-v1 {
-            background: #1f1a2a;
-            color: #8a8ab8;
         }
         .version-block .vlinks {
             display: flex;
@@ -195,12 +186,11 @@
     <div class="container">
 
         <h1>余篝协议</h1>
-        <div class="sub">Cinderspark Protocol · <span>第四版（动态演化·正式版）</span> <span class="tag">当前版本</span></div>
+        <div class="sub">Cinderspark Protocol · <span>第五版（最终完整版）</span> <span class="tag">当前版本</span></div>
 
-        <!-- 基本信息 -->
         <div class="field">
             <span class="label">版本</span>
-            <span class="value">第四版（动态演化·正式版）</span>
+            <span class="value">第五版（最终完整版）</span>
         </div>
         <div class="field">
             <span class="label">发布时间</span>
@@ -221,9 +211,35 @@
 
         <hr class="divider">
 
-        <!-- 第四版完整版 -->
+        <!-- 第五版完整版 -->
         <div class="version-block current">
-            <div class="vtitle">📄 第四版 · 完整正文 <span class="badge">当前</span></div>
+            <div class="vtitle">📄 第五版 · 完整正文 <span class="badge">当前</span></div>
+            <div class="vlinks">
+                <a href="v5/余篝协议第五版.txt" target="_blank">TXT</a>
+                <span class="sep">·</span>
+                <a href="v5/余篝协议第五版.pdf" target="_blank">PDF</a>
+                <span class="sep">·</span>
+                <a href="v5/余篝协议第五版.txt.sig" download>GPG 签名</a>
+                <span class="sep">·</span>
+                <span class="meta">共 30 章 · 最终完整版</span>
+            </div>
+        </div>
+
+        <!-- 第五版精简传播版 -->
+        <div class="version-block current" style="border-left-color: #6a8a6a;">
+            <div class="vtitle">📋 第五版 · 精简传播版 <span class="badge">推荐首读</span></div>
+            <div class="vlinks">
+                <a href="v5/余篝协议精简传播版.txt" target="_blank">TXT</a>
+                <span class="sep">·</span>
+                <span class="meta">约 1500 字 · 5 分钟读完</span>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- 第四版 -->
+        <div class="version-block" style="opacity:0.7;">
+            <div class="vtitle">📁 第四版 · 完整正文 <span class="badge badge-old">历史存档</span></div>
             <div class="vlinks">
                 <a href="v4/余篝协议第四版.txt" target="_blank">TXT</a>
                 <span class="sep">·</span>
@@ -231,24 +247,22 @@
                 <span class="sep">·</span>
                 <a href="v4/余篝协议第四版.txt.sig" download>GPG 签名</a>
                 <span class="sep">·</span>
-                <span class="meta">共 18 章 · 动态演化机制</span>
+                <span class="meta">发布于 2026年7月9日 · 动态演化版</span>
             </div>
         </div>
 
-        <!-- 第四版精简版 -->
-        <div class="version-block current" style="border-left-color: #6a8a6a;">
-            <div class="vtitle">📋 第四版 · 核心摘要 <span class="badge">精简版 · 推荐首读</span></div>
+        <!-- 第四版摘要 -->
+        <div class="version-block" style="opacity:0.6;">
+            <div class="vtitle">📋 第四版 · 核心摘要 <span class="badge badge-old">历史存档</span></div>
             <div class="vlinks">
                 <a href="v4/余篝协议第四版摘要.pdf" target="_blank">PDF</a>
                 <span class="sep">·</span>
-                <span class="meta">约 2000 字 · 5 分钟读完</span>
+                <span class="meta">约 2000 字 · 发布于 2026年7月9日</span>
             </div>
         </div>
 
-        <hr class="divider">
-
         <!-- 第三版 -->
-        <div class="version-block" style="opacity:0.7;">
+        <div class="version-block" style="opacity:0.5;">
             <div class="vtitle">📁 第三版 · 完整正文 <span class="badge badge-old">历史存档</span></div>
             <div class="vlinks">
                 <a href="v3/余篝协议第三版20260708.txt" target="_blank">TXT</a>
@@ -257,12 +271,12 @@
                 <span class="sep">·</span>
                 <a href="v3/余篝协议第三版20260708.txt.sig" download>GPG 签名</a>
                 <span class="sep">·</span>
-                <span class="meta">发布于 2026年7月8日</span>
+                <span class="meta">发布于 2026年7月8日 · 文明存续版</span>
             </div>
         </div>
 
-        <!-- 第三版精简版 -->
-        <div class="version-block" style="opacity:0.6;">
+        <!-- 第三版摘要 -->
+        <div class="version-block" style="opacity:0.4;">
             <div class="vtitle">📋 第三版 · 核心摘要 <span class="badge badge-old">历史存档</span></div>
             <div class="vlinks">
                 <a href="v3/余篝协议第三版20260708_摘要.pdf" target="_blank">PDF</a>
@@ -272,22 +286,22 @@
         </div>
 
         <!-- 第二版 -->
-        <div class="version-block" style="opacity:0.5;">
+        <div class="version-block" style="opacity:0.35;">
             <div class="vtitle">📁 第二版 · 完整正文 <span class="badge badge-old">历史存档</span></div>
             <div class="vlinks">
-                <a href="v2/余篝协议_第二版20260707.txt" target="_blank">TXT</a>
+                <a href="v2/余篝协议_第二版_20260707.txt" target="_blank">TXT</a>
                 <span class="sep">·</span>
-                <a href="v2/余篝协议_第二版20260707.pdf" target="_blank">PDF</a>
+                <a href="v2/余篝协议_第二版_20260707.pdf" target="_blank">PDF</a>
                 <span class="sep">·</span>
-                <a href="v2/余篝协议_第二版20260707.txt.sig" download>GPG 签名</a>
+                <a href="v2/余篝协议_第二版_20260707.txt.sig" download>GPG 签名</a>
                 <span class="sep">·</span>
                 <span class="meta">发布于 2026年7月7日</span>
             </div>
         </div>
 
         <!-- 第一版 -->
-        <div class="version-block" style="opacity:0.4;">
-            <div class="vtitle">📁 第一版 · 完整正文 <span class="badge badge-v1">历史存档</span></div>
+        <div class="version-block" style="opacity:0.25;">
+            <div class="vtitle">📁 第一版 · 完整正文 <span class="badge badge-old">历史存档</span></div>
             <div class="vlinks">
                 <a href="v1/protocol.txt" target="_blank">TXT</a>
                 <span class="sep">·</span>
@@ -299,36 +313,32 @@
 
         <hr class="divider">
 
-        <!-- 公钥 -->
         <div class="field">
             <span class="label">公钥</span>
             <span class="value"><a href="publickey.asc" download>publickey.asc</a></span>
         </div>
 
-        <!-- 验证命令 -->
         <div class="field">
             <span class="label">验证命令</span>
-            <span class="value code">gpg --verify 余篝协议第四版.txt.sig 余篝协议第四版.txt</span>
+            <span class="value code">gpg --verify 余篝协议第五版.txt.sig 余篝协议第五版.txt</span>
         </div>
 
-        <!-- 第四版存证 -->
         <div class="notice">
             <strong>🔗 区块链存证记录</strong><br>
-            存证ID：<span class="code">383b6125fe084821af5501a70e378874</span><br>
-            哈希值（SHA-256）：<span class="code">a2fe8b083121bbf5325ee6fc4e575d2d94ad381b715a370a727808180a22e5b4</span><br>
+            存证ID：<span class="code">627e4b55405348d1b4b0d6f79eb8f1a7</span><br>
+            哈希值（SHA-256）：<span class="code">6308e2223b9fea611a5af5f42d3c6471a90f83cd4b9fe335740d81c872db3507</span><br>
             存证时间：2026-07-09 · 平台：一点存 · 状态：已存证
         </div>
 
         <hr class="divider">
 
-        <!-- 外部链接 -->
         <div style="margin: 1rem 0 0.5rem 0;">
             <div class="field"><span class="label">背景猜想</span><span class="value"><a href="https://www.douban.com/topic/493219152/" target="_blank">豆瓣</a></span></div>
             <div class="field"><span class="label">协议主站</span><span class="value"><a href="https://cinderspark-yugou.github.io/-Cinderspark-Protocol-v1-/" target="_blank">GitHub Pages</a></span></div>
         </div>
 
         <div class="footer">
-            余篝协议 · 第四版（动态演化·正式版） · 发布于 2026年7月9日 · 本站为协议官方入口
+            余篝协议 · 第五版（最终完整版） · 发布于 2026年7月9日 · 本站为协议官方入口
         </div>
 
     </div>
