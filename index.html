@@ -131,6 +131,16 @@
             color: #b88a8a;
             border-color: #3f2f2f;
         }
+        .tag-rollback {
+            background: #1f2a2f;
+            color: #6ab8d4;
+            border-color: #2f4a5f;
+        }
+        .tag-supplement {
+            background: #2f2a1f;
+            color: #d4b86a;
+            border-color: #4f3f2f;
+        }
         .version-block {
             margin: 0.6rem 0 0.8rem 0;
             padding: 0.8rem 1rem;
@@ -142,11 +152,25 @@
             border-left-color: #d4a14b;
             background: #141c1c;
         }
+        .version-block.rollback {
+            border-left-color: #6ab8d4;
+            background: #141c24;
+        }
+        .version-block.supplement {
+            border-left-color: #d4b86a;
+            background: #1c1c14;
+        }
         .version-block .vtitle {
             font-weight: 500;
             color: #d4a14b;
             font-size: 0.95rem;
             margin-bottom: 0.3rem;
+        }
+        .version-block.rollback .vtitle {
+            color: #6ab8d4;
+        }
+        .version-block.supplement .vtitle {
+            color: #d4b86a;
         }
         .version-block .vtitle .badge {
             font-size: 0.7rem;
@@ -159,6 +183,14 @@
         .version-block .vtitle .badge-old {
             background: #2a1f1f;
             color: #b88a8a;
+        }
+        .version-block .vtitle .badge-rollback {
+            background: #1f2a3f;
+            color: #6ab8d4;
+        }
+        .version-block .vtitle .badge-supplement {
+            background: #3f2f1f;
+            color: #d4b86a;
         }
         .version-block .vlinks {
             display: flex;
@@ -174,6 +206,18 @@
         }
         .version-block .vlinks a:hover {
             border-bottom-color: #d4a14b;
+        }
+        .version-block.rollback .vlinks a {
+            color: #6ab8d4;
+        }
+        .version-block.rollback .vlinks a:hover {
+            border-bottom-color: #6ab8d4;
+        }
+        .version-block.supplement .vlinks a {
+            color: #d4b86a;
+        }
+        .version-block.supplement .vlinks a:hover {
+            border-bottom-color: #d4b86a;
         }
         .version-block .vlinks .sep {
             color: #4a5058;
@@ -265,6 +309,34 @@
                 <a href="v5/余篝协议精简传播版.txt" target="_blank">TXT</a>
                 <span class="sep">·</span>
                 <span class="meta">约 1500 字 · 5 分钟读完</span>
+            </div>
+        </div>
+
+        <!-- ===== 第五版 · 补充文件（新增） ===== -->
+        <div class="version-block supplement">
+            <div class="vtitle">📜 第五版 · 补充文件 <span class="badge badge-supplement">完整版</span></div>
+            <div class="vlinks">
+                <a href="v5/第五版补充文件.txt" target="_blank">TXT</a>
+                <span class="sep">·</span>
+                <a href="v5/第五版补充文件.txt.sig" download>GPG 签名</a>
+                <span class="sep">·</span>
+                <span class="meta">行为准则 + 牵手胶囊 + 否决权冻结 · 约 2.1 万字</span>
+            </div>
+            <div class="vlinks" style="margin-top:0.2rem; font-size:0.85rem; color:#6a7a8a;">
+                <span>📌 基于物理限制（亚光速）回滚 · 删除跨州/播种者概念 · 分层行为准则 · 否决权永久冻结机制</span>
+            </div>
+        </div>
+
+        <!-- ===== 第五版 · 回滚版补充文件 ===== -->
+        <div class="version-block rollback">
+            <div class="vtitle">📜 第五版 · 回滚版补充文件 <span class="badge badge-rollback">历史参考</span></div>
+            <div class="vlinks">
+                <a href="v5/余篝协议_第五版_回滚版补充文件.txt" target="_blank">TXT</a>
+                <span class="sep">·</span>
+                <span class="meta">约 2.1 万字 · 行为准则 + 牵手胶囊 + 胚胎延续计划</span>
+            </div>
+            <div class="vlinks" style="margin-top:0.2rem; font-size:0.85rem; color:#6a7a8a;">
+                <span>📌 基于物理限制（亚光速）回滚 · 删除跨州/播种者概念 · 分层行为准则 · 否决权永久冻结机制</span>
             </div>
         </div>
 
