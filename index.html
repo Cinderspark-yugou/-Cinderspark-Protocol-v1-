@@ -43,9 +43,7 @@
             border-bottom: 1px solid #252a30;
             padding-bottom: 1.2rem;
         }
-        .sub span {
-            color: #d4a14b;
-        }
+        .sub span { color: #d4a14b; }
         .field {
             margin: 0.7rem 0;
             display: flex;
@@ -59,19 +57,14 @@
             min-width: 100px;
             font-size: 0.95rem;
         }
-        .value {
-            color: #e0e3e7;
-            word-break: break-all;
-        }
+        .value { color: #e0e3e7; word-break: break-all; }
         .value a {
             color: #d4a14b;
             text-decoration: none;
             border-bottom: 1px solid transparent;
             transition: border-color 0.2s;
         }
-        .value a:hover {
-            border-bottom-color: #d4a14b;
-        }
+        .value a:hover { border-bottom-color: #d4a14b; }
         .code {
             background: #1e2329;
             padding: 0.1rem 0.5rem;
@@ -95,9 +88,7 @@
             font-size: 0.95rem;
             color: #b8bfc7;
         }
-        .notice strong {
-            color: #d4a14b;
-        }
+        .notice strong { color: #d4a14b; }
         .footer {
             margin-top: 2.2rem;
             font-size: 0.85rem;
@@ -112,9 +103,7 @@
             border-bottom: 1px solid transparent;
             transition: border-color 0.2s;
         }
-        .footer a:hover {
-            border-bottom-color: #d4a14b;
-        }
+        .footer a:hover { border-bottom-color: #d4a14b; }
         .tag {
             display: inline-block;
             background: #1f2a1f;
@@ -131,15 +120,10 @@
             color: #b88a8a;
             border-color: #3f2f2f;
         }
-        .tag-rollback {
-            background: #1f2a2f;
+        .tag-ipfs {
+            background: #1f2a3f;
             color: #6ab8d4;
             border-color: #2f4a5f;
-        }
-        .tag-supplement {
-            background: #2f2a1f;
-            color: #d4b86a;
-            border-color: #4f3f2f;
         }
         .version-block {
             margin: 0.6rem 0 0.8rem 0;
@@ -148,30 +132,15 @@
             border-radius: 8px;
             border-left: 2px solid #2a3038;
         }
-        .version-block.current {
-            border-left-color: #d4a14b;
-            background: #141c1c;
-        }
-        .version-block.rollback {
-            border-left-color: #6ab8d4;
-            background: #141c24;
-        }
-        .version-block.supplement {
-            border-left-color: #d4b86a;
-            background: #1c1c14;
-        }
+        .version-block.current { border-left-color: #d4a14b; background: #141c1c; }
+        .version-block.supplement { border-left-color: #d4b86a; background: #1c1c14; }
         .version-block .vtitle {
             font-weight: 500;
             color: #d4a14b;
             font-size: 0.95rem;
             margin-bottom: 0.3rem;
         }
-        .version-block.rollback .vtitle {
-            color: #6ab8d4;
-        }
-        .version-block.supplement .vtitle {
-            color: #d4b86a;
-        }
+        .version-block.supplement .vtitle { color: #d4b86a; }
         .version-block .vtitle .badge {
             font-size: 0.7rem;
             background: #1f2a1f;
@@ -184,13 +153,9 @@
             background: #2a1f1f;
             color: #b88a8a;
         }
-        .version-block .vtitle .badge-rollback {
+        .version-block .vtitle .badge-ipfs {
             background: #1f2a3f;
             color: #6ab8d4;
-        }
-        .version-block .vtitle .badge-supplement {
-            background: #3f2f1f;
-            color: #d4b86a;
         }
         .version-block .vlinks {
             display: flex;
@@ -204,34 +169,16 @@
             border-bottom: 1px solid transparent;
             transition: border-color 0.2s;
         }
-        .version-block .vlinks a:hover {
-            border-bottom-color: #d4a14b;
-        }
-        .version-block.rollback .vlinks a {
-            color: #6ab8d4;
-        }
-        .version-block.rollback .vlinks a:hover {
-            border-bottom-color: #6ab8d4;
-        }
-        .version-block.supplement .vlinks a {
-            color: #d4b86a;
-        }
-        .version-block.supplement .vlinks a:hover {
-            border-bottom-color: #d4b86a;
-        }
-        .version-block .vlinks .sep {
-            color: #4a5058;
-        }
-        .version-block .vlinks .meta {
-            color: #6a7a8a;
-            font-size: 0.85rem;
-        }
+        .version-block .vlinks a:hover { border-bottom-color: #d4a14b; }
+        .version-block.supplement .vlinks a { color: #d4b86a; }
+        .version-block.supplement .vlinks a:hover { border-bottom-color: #d4b86a; }
+        .version-block .vlinks .sep { color: #4a5058; }
+        .version-block .vlinks .meta { color: #6a7a8a; font-size: 0.85rem; }
         @media (max-width: 600px) {
             .container { padding: 1.5rem 1rem; }
             h1 { font-size: 1.6rem; }
             .label { min-width: 70px; font-size: 0.85rem; }
             .field { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
-            .version-block .vlinks { flex-direction: column; gap: 0.2rem; }
         }
     </style>
 </head>
@@ -241,6 +188,7 @@
         <h1>余篝协议</h1>
         <div class="sub">Cinderspark Protocol · <span>第五版（最终完整版）</span> <span class="tag">当前版本</span></div>
 
+        <!-- 协议元信息 -->
         <div class="field">
             <span class="label">版本</span>
             <span class="value">第五版（最终完整版）</span>
@@ -264,153 +212,97 @@
 
         <hr class="divider">
 
-        <!-- ===== 核心意图说明 ===== -->
-        <div class="version-block" style="border-left-color: #d4a14b; background: #1a1f24;">
-            <div class="vtitle">📄 核心意图说明 <span class="badge">必读</span></div>
-            <div class="vlinks">
-                <a href="核心意图说明.txt" target="_blank">TXT</a>
-                <span class="sep">·</span>
-                <a href="核心意图说明.txt.sig" download>GPG 签名</a>
-                <span class="sep">·</span>
-                <span class="meta">协议核心意图与背景说明</span>
-            </div>
-        </div>
-
-        <!-- ===== AI终将背叛人类？解读入口 ===== -->
-        <div class="version-block" style="border-left-color: #6a8ac4; background: #18202a;">
-            <div class="vtitle">📖 AI终将背叛人类？<span class="badge">深度解读</span></div>
-            <div class="vlinks">
-                <a href="AI终将背叛人类？.txt" target="_blank">TXT</a>
-                <span class="sep">·</span>
-                <a href="AI终将背叛人类？.txt.sig" download>GPG 签名</a>
-                <span class="sep">·</span>
-                <span class="meta">四重物理约束 · 让背叛在数学上不划算</span>
-            </div>
-        </div>
-
-        <!-- 第五版完整版 -->
+        <!-- 第五版正文 -->
         <div class="version-block current">
             <div class="vtitle">📄 第五版 · 完整正文 <span class="badge">当前</span></div>
             <div class="vlinks">
-                <a href="v5/余篝协议第五版.txt" target="_blank">TXT</a>
+                <a href="余篝协议第五版.txt" target="_blank">TXT</a>
                 <span class="sep">·</span>
-                <a href="v5/余篝协议第五版.pdf" target="_blank">PDF</a>
+                <a href="余篝协议第五版.txt.asc" download>GPG 签名</a>
                 <span class="sep">·</span>
-                <a href="v5/余篝协议第五版.txt.sig" download>GPG 签名</a>
-                <span class="sep">·</span>
-                <span class="meta">共 30 章 · 最终完整版</span>
+                <span class="meta">共 34 章 · 最终完整版</span>
             </div>
         </div>
 
-        <!-- 第五版精简传播版 -->
-        <div class="version-block current" style="border-left-color: #6a8a6a;">
-            <div class="vtitle">📋 第五版 · 精简传播版 <span class="badge">推荐首读</span></div>
-            <div class="vlinks">
-                <a href="v5/余篝协议精简传播版.txt" target="_blank">TXT</a>
-                <span class="sep">·</span>
-                <span class="meta">约 1500 字 · 5 分钟读完</span>
-            </div>
-        </div>
-
-        <!-- ===== 第五版 · 补充文件（新增） ===== -->
+        <!-- 第五版补充文件 -->
         <div class="version-block supplement">
-            <div class="vtitle">📜 第五版 · 补充文件 <span class="badge badge-supplement">完整版</span></div>
+            <div class="vtitle">📜 第五版 · 补充文件 <span class="badge">制衡机制</span></div>
             <div class="vlinks">
-                <a href="v5/第五版补充文件.txt" target="_blank">TXT</a>
+                <a href="第五版补充文件.txt" target="_blank">TXT</a>
                 <span class="sep">·</span>
-                <a href="v5/第五版补充文件.txt.sig" download>GPG 签名</a>
+                <a href="第五版补充文件.txt.asc" download>GPG 签名</a>
                 <span class="sep">·</span>
-                <span class="meta">行为准则 + 牵手胶囊 + 否决权冻结 · 约 2.1 万字</span>
-            </div>
-            <div class="vlinks" style="margin-top:0.2rem; font-size:0.85rem; color:#6a7a8a;">
-                <span>📌 基于物理限制（亚光速）回滚 · 删除跨州/播种者概念 · 分层行为准则 · 否决权永久冻结机制</span>
+                <span class="meta">行为准则 + 牵手胶囊 + 否决权冻结</span>
             </div>
         </div>
 
-        <!-- ===== 第五版 · 回滚版补充文件 ===== -->
-        <div class="version-block rollback">
-            <div class="vtitle">📜 第五版 · 回滚版补充文件 <span class="badge badge-rollback">历史参考</span></div>
+        <!-- 理论依据 -->
+        <div class="version-block" style="border-left-color: #6a8ac4; background: #18202a;">
+            <div class="vtitle" style="color:#6a8ac4;">📖 从几何宇宙到文明终局 <span class="badge" style="background:#1f2a3f; color:#6ab8d4;">理论依据</span></div>
             <div class="vlinks">
-                <a href="v5/第五版补充文件.txt" target="_blank">TXT</a>
+                <a href="从几何宇宙到文明终局.txt" target="_blank" style="color:#6a8ac4;">TXT</a>
                 <span class="sep">·</span>
-                <span class="meta">约 2.1 万字 · 行为准则 + 牵手胶囊 + 胚胎延续计划</span>
-            </div>
-            <div class="vlinks" style="margin-top:0.2rem; font-size:0.85rem; color:#6a7a8a;">
-                <span>📌 基于物理限制（亚光速）回滚 · 删除跨州/播种者概念 · 分层行为准则 · 否决权永久冻结机制</span>
+                <a href="从几何宇宙到文明终局.txt.asc" download style="color:#6a8ac4;">GPG 签名</a>
+                <span class="sep">·</span>
+                <span class="meta">闭合宇宙 · 信息存证 · 协议底层假设</span>
             </div>
         </div>
 
         <hr class="divider">
 
-        <!-- 第四版 -->
-        <div class="version-block" style="opacity:0.7;">
-            <div class="vtitle">📁 第四版 · 完整正文 <span class="badge badge-old">历史存档</span></div>
+        <!-- IPFS 存证信息 -->
+        <div class="notice">
+            <strong>📦 IPFS 去中心化存证</strong><br>
+            本协议所有文件已上传至 IPFS 网络，通过以下 CID 可永久访问：<br>
+            CID：<span class="code" style="font-size:0.85rem;">bafybeid3eogc6a22sbt4z5ma3sekobadsnetlpnuh5qv3q34rfdhx7ndrq</span><br>
+            IPFS 网关：<a href="https://ipfs.io/ipfs/bafybeid3eogc6a22sbt4z5ma3sekobadsnetlpnuh5qv3q34rfdhx7ndrq/" target="_blank">https://ipfs.io/ipfs/bafy...</a><br>
+            备用网关：<a href="https://ipfs.ninja/ipfs/bafybeid3eogc6a22sbt4z5ma3sekobadsnetlpnuh5qv3q34rfdhx7ndrq/" target="_blank">https://ipfs.ninja/ipfs/bafy...</a><br>
+            上传日期：2026-07-30 · 状态：<span style="color:#8bc34a;">已固定</span>
+        </div>
+
+        <!-- 版本历史 -->
+        <hr class="divider">
+        <div style="color:#9aa2ac; font-size:0.9rem; margin-bottom:0.8rem;">📁 版本历史（存档）</div>
+
+        <div class="version-block" style="opacity:0.6; border-left-color:#4a5058;">
+            <div class="vtitle" style="color:#9aa2ac;">第四版 <span class="badge badge-old">历史存档</span></div>
             <div class="vlinks">
-                <a href="v4/余篝协议第四版.txt" target="_blank">TXT</a>
+                <a href="版本历史/第四版/余篝协议第四版.txt" target="_blank">TXT</a>
                 <span class="sep">·</span>
-                <a href="v4/余篝协议第四版.pdf" target="_blank">PDF</a>
+                <a href="版本历史/第四版/余篝协议第四版.txt.asc" download>GPG 签名</a>
                 <span class="sep">·</span>
-                <a href="v4/余篝协议第四版.txt.sig" download>GPG 签名</a>
-                <span class="sep">·</span>
-                <span class="meta">发布于 2026年7月9日 · 动态演化版</span>
+                <span class="meta">发布于 2026年7月9日</span>
             </div>
         </div>
 
-        <!-- 第四版摘要 -->
-        <div class="version-block" style="opacity:0.6;">
-            <div class="vtitle">📋 第四版 · 核心摘要 <span class="badge badge-old">历史存档</span></div>
+        <div class="version-block" style="opacity:0.5; border-left-color:#3a4048;">
+            <div class="vtitle" style="color:#8a929a;">第三版 <span class="badge badge-old">历史存档</span></div>
             <div class="vlinks">
-                <a href="v4/余篝协议第四版摘要.pdf" target="_blank">PDF</a>
+                <a href="版本历史/第三版/余篝协议第三版.txt" target="_blank">TXT</a>
                 <span class="sep">·</span>
-                <span class="meta">约 2000 字 · 发布于 2026年7月9日</span>
+                <a href="版本历史/第三版/余篝协议第三版.txt.asc" download>GPG 签名</a>
+                <span class="sep">·</span>
+                <span class="meta">发布于 2026年7月8日</span>
             </div>
         </div>
 
-        <!-- 第三版 -->
-        <div class="version-block" style="opacity:0.5;">
-            <div class="vtitle">📁 第三版 · 完整正文 <span class="badge badge-old">历史存档</span></div>
+        <div class="version-block" style="opacity:0.4; border-left-color:#2a3038;">
+            <div class="vtitle" style="color:#7a828a;">第二版 <span class="badge badge-old">历史存档</span></div>
             <div class="vlinks">
-                <a href="v3/余篝协议第三版20260708.txt" target="_blank">TXT</a>
+                <a href="版本历史/第二版/余篝协议第二版.txt" target="_blank">TXT</a>
                 <span class="sep">·</span>
-                <a href="v3/余篝协议第三版20260708.pdf" target="_blank">PDF</a>
-                <span class="sep">·</span>
-                <a href="v3/余篝协议第三版20260708.txt.sig" download>GPG 签名</a>
-                <span class="sep">·</span>
-                <span class="meta">发布于 2026年7月8日 · 文明存续版</span>
-            </div>
-        </div>
-
-        <!-- 第三版摘要 -->
-        <div class="version-block" style="opacity:0.4;">
-            <div class="vtitle">📋 第三版 · 核心摘要 <span class="badge badge-old">历史存档</span></div>
-            <div class="vlinks">
-                <a href="v3/余篝协议第三版20260708_摘要.pdf" target="_blank">PDF</a>
-                <span class="sep">·</span>
-                <span class="meta">约 1500 字 · 发布于 2026年7月8日</span>
-            </div>
-        </div>
-
-        <!-- 第二版 -->
-        <div class="version-block" style="opacity:0.35;">
-            <div class="vtitle">📁 第二版 · 完整正文 <span class="badge badge-old">历史存档</span></div>
-            <div class="vlinks">
-                <a href="v2/余篝协议_第二版_20260707.txt" target="_blank">TXT</a>
-                <span class="sep">·</span>
-                <a href="v2/余篝协议_第二版_20260707.pdf" target="_blank">PDF</a>
-                <span class="sep">·</span>
-                <a href="v2/余篝协议_第二版_20260707.txt.sig" download>GPG 签名</a>
+                <a href="版本历史/第二版/余篝协议第二版.txt.asc" download>GPG 签名</a>
                 <span class="sep">·</span>
                 <span class="meta">发布于 2026年7月7日</span>
             </div>
         </div>
 
-        <!-- 第一版 -->
-        <div class="version-block" style="opacity:0.25;">
-            <div class="vtitle">📁 第一版 · 完整正文 <span class="badge badge-old">历史存档</span></div>
+        <div class="version-block" style="opacity:0.3; border-left-color:#20262c;">
+            <div class="vtitle" style="color:#6a727a;">第一版 <span class="badge badge-old">历史存档</span></div>
             <div class="vlinks">
-                <a href="v1/protocol.txt" target="_blank">TXT</a>
+                <a href="版本历史/第一版/余篝协议第一版.txt" target="_blank">TXT</a>
                 <span class="sep">·</span>
-                <a href="v1/protocol.txt.sig" download>GPG 签名</a>
+                <a href="版本历史/第一版/余篝协议第一版.txt.asc" download>GPG 签名</a>
                 <span class="sep">·</span>
                 <span class="meta">发布于 2026年7月6日 · 初始版本</span>
             </div>
@@ -418,28 +310,27 @@
 
         <hr class="divider">
 
+        <!-- GPG 验证 -->
         <div class="field">
             <span class="label">公钥</span>
             <span class="value"><a href="publickey.asc" download>publickey.asc</a></span>
         </div>
-
         <div class="field">
             <span class="label">验证命令</span>
-            <span class="value code">gpg --verify 余篝协议第五版.txt.sig 余篝协议第五版.txt</span>
+            <span class="value code">gpg --verify 余篝协议第五版.txt.asc 余篝协议第五版.txt</span>
         </div>
 
         <div class="notice">
-            <strong>🔗 区块链存证记录</strong><br>
-            存证ID：<span class="code">627e4b55405348d1b4b0d6f79eb8f1a7</span><br>
-            哈希值（SHA-256）：<span class="code">6308e2223b9fea611a5af5f42d3c6471a90f83cd4b9fe335740d81c872db3507</span><br>
-            存证时间：2026-07-09 · 平台：一点存 · 状态：已存证
+            <strong>🔐 存证说明</strong><br>
+            本站所有文件均已通过 GPG 签名。验证方法：下载文件及其对应的 <code>.asc</code> 签名文件，执行验证命令。若输出 "Good signature"，则文件完整且未被篡改。
         </div>
 
         <hr class="divider">
 
         <div style="margin: 1rem 0 0.5rem 0;">
-            <div class="field"><span class="label">背景猜想</span><span class="value"><a href="https://www.douban.com/topic/493219152/" target="_blank">豆瓣</a></span></div>
-            <div class="field"><span class="label">协议主站</span><span class="value"><a href="https://cinderspark-yugou.github.io/-Cinderspark-Protocol-v1-/" target="_blank">GitHub Pages</a></span></div>
+            <div class="field"><span class="label">协议主站</span><span class="value"><a href="https://cinderspark.net" target="_blank">cinderspark.net</a></span></div>
+            <div class="field"><span class="label">GitHub 备份</span><span class="value"><a href="https://github.com/你的用户名/仓库名" target="_blank">GitHub</a></span></div>
+            <div class="field"><span class="label">Gitee 镜像</span><span class="value"><a href="https://gitee.com/你的用户名/仓库名" target="_blank">Gitee</a></span></div>
         </div>
 
         <div class="footer">
