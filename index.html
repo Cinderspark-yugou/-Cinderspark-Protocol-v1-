@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>余篝协议 · 第五版 · 最终完整版 · 去中心化存证</title>
+    <title>余篝协议 · 第五版 · 最终完整版 · 多重去中心化存证</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -79,6 +79,47 @@
             border-top: 1px solid #252a30;
             margin: 1.8rem 0;
         }
+
+        /* 存证摘要卡片 */
+        .attestation-summary {
+            background: linear-gradient(135deg, #142014 0%, #1a2a1a 100%);
+            border: 1px solid #3a6a3a;
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .attestation-summary .main-badge {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #8bc34a;
+            margin-bottom: 0.3rem;
+        }
+        .attestation-summary .sub-badge {
+            font-size: 0.9rem;
+            color: #9aa2ac;
+            margin-bottom: 0.5rem;
+        }
+        .attestation-summary .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1rem;
+            font-size: 0.85rem;
+            color: #b8bfc7;
+        }
+        .attestation-summary .badge-list .dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 0.3rem;
+        }
+        .dot-green { background: #8bc34a; }
+        .dot-blue { background: #6a8ac4; }
+        .dot-cyan { background: #6ab8d4; }
+        .dot-gold { background: #d4a14b; }
+
         .notice {
             background: #1a1f24;
             border-left: 3px solid #d4a14b;
@@ -109,21 +150,7 @@
             background: #1a1f24;
         }
         .notice-download strong { color: #d4a14b; }
-        .footer {
-            margin-top: 2.2rem;
-            font-size: 0.85rem;
-            color: #6a7a8a;
-            border-top: 1px solid #1f242a;
-            padding-top: 1.2rem;
-            text-align: center;
-        }
-        .footer a {
-            color: #d4a14b;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s;
-        }
-        .footer a:hover { border-bottom-color: #d4a14b; }
+
         .tag {
             display: inline-block;
             background: #1f2a1f;
@@ -145,6 +172,7 @@
             color: #d4b86a;
             border-color: #4f3f2f;
         }
+
         .version-block {
             margin: 0.6rem 0 0.8rem 0;
             padding: 0.8rem 1rem;
@@ -194,6 +222,7 @@
         .version-block.supplement .vlinks a:hover { border-bottom-color: #d4b86a; }
         .version-block .vlinks .sep { color: #4a5058; }
         .version-block .vlinks .meta { color: #6a7a8a; font-size: 0.85rem; }
+
         .hash-list {
             margin: 0.5rem 0 0 0;
             padding: 0;
@@ -216,6 +245,7 @@
             color: #c8cdd3;
             word-break: break-all;
         }
+
         .txid-list {
             margin: 0.5rem 0 0 0;
             padding: 0;
@@ -238,6 +268,7 @@
             color: #c8cdd3;
             word-break: break-all;
         }
+
         .ots-download-list {
             margin: 0.5rem 0 0 0;
             padding: 0;
@@ -261,6 +292,7 @@
             transition: border-color 0.2s;
         }
         .ots-download-list .ol-link a:hover { border-bottom-color: #d4a14b; }
+
         .verify-steps {
             margin-top: 0.8rem;
             padding-top: 0.8rem;
@@ -275,9 +307,21 @@
         .verify-steps ol li {
             margin-bottom: 0.2rem;
         }
-        .verify-steps .highlight {
-            color: #8bc34a;
+        .footer {
+            margin-top: 2.2rem;
+            font-size: 0.85rem;
+            color: #6a7a8a;
+            border-top: 1px solid #1f242a;
+            padding-top: 1.2rem;
+            text-align: center;
         }
+        .footer a {
+            color: #d4a14b;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .footer a:hover { border-bottom-color: #d4a14b; }
         @media (max-width: 600px) {
             .container { padding: 1.5rem 1rem; }
             h1 { font-size: 1.6rem; }
@@ -287,11 +331,28 @@
             .hash-list .hl-label,
             .txid-list .tl-label,
             .ots-download-list .ol-label { min-width: 60px; }
+            .attestation-summary .badge-list { flex-direction: column; align-items: center; gap: 0.2rem; }
         }
     </style>
 </head>
 <body>
 <div class="container">
+
+    <!-- ===== 顶部：存证摘要卡片 ===== -->
+    <div class="attestation-summary">
+        <div class="main-badge">✅ 本协议已通过多重去中心化方式存证</div>
+        <div class="sub-badge">所有核心文件均已锚定至区块链 · 永久可验证</div>
+        <div class="badge-list">
+            <span><span class="dot dot-green"></span>SHA-256 哈希</span>
+            <span><span class="dot dot-blue"></span>Arweave 永久存储</span>
+            <span><span class="dot dot-cyan"></span>IPFS 备份</span>
+            <span><span class="dot dot-gold"></span>比特币时间戳</span>
+            <span><span class="dot dot-green"></span>GPG 签名</span>
+        </div>
+        <div style="margin-top:0.5rem; font-size:0.8rem; color:#6a7a8a;">
+            👇 向下滚动查看所有存证详情及验证方法
+        </div>
+    </div>
 
     <h1>余篝协议</h1>
     <div class="sub">Cinderspark Protocol · <span>第五版（最终完整版）</span> <span class="tag">当前版本</span></div>
@@ -320,9 +381,7 @@
 
     <hr class="divider" />
 
-    <!-- ========== 核心文件 ========== -->
-
-    <!-- 第五版正文 -->
+    <!-- ===== 核心文件 ===== -->
     <div class="version-block current">
         <div class="vtitle">📄 第五版 · 完整正文 <span class="badge">当前</span></div>
         <div class="vlinks">
@@ -334,7 +393,6 @@
         </div>
     </div>
 
-    <!-- 补充文件 -->
     <div class="version-block supplement">
         <div class="vtitle">📜 补充文件 <span class="badge badge-supplement">制衡机制</span></div>
         <div class="vlinks">
@@ -346,7 +404,6 @@
         </div>
     </div>
 
-    <!-- 理论依据 -->
     <div class="version-block" style="border-left-color: #6a8ac4; background: #18202a;">
         <div class="vtitle" style="color:#6a8ac4;">📖 从几何宇宙到文明终局 <span class="badge" style="background:#1f2a3f; color:#6ab8d4;">理论依据</span></div>
         <div class="vlinks">
@@ -360,8 +417,7 @@
 
     <hr class="divider" />
 
-    <!-- ========== 可追溯资料 ========== -->
-
+    <!-- ===== 可追溯资料 ===== -->
     <div class="version-block" style="border-left-color: #d4a14b; background: #1a1f24; opacity:0.85;">
         <div class="vtitle">📄 核心意图说明 <span class="badge">必读</span></div>
         <div class="vlinks">
@@ -387,7 +443,6 @@
     <!-- 版本历史 -->
     <div style="margin: 1rem 0 0.5rem 0; font-size: 0.85rem; color: #6a7a8a;">——— 版本历史（存档） ———</div>
 
-    <!-- 第四版 -->
     <div class="version-block" style="opacity:0.6; border-left-color:#4a5058;">
         <div class="vtitle" style="color:#9aa2ac;">第四版 <span class="badge badge-old">历史存档</span></div>
         <div class="vlinks">
@@ -399,7 +454,6 @@
         </div>
     </div>
 
-    <!-- 第三版 -->
     <div class="version-block" style="opacity:0.5; border-left-color:#3a4048;">
         <div class="vtitle" style="color:#8a929a;">第三版 <span class="badge badge-old">历史存档</span></div>
         <div class="vlinks">
@@ -411,7 +465,6 @@
         </div>
     </div>
 
-    <!-- 第二版 -->
     <div class="version-block" style="opacity:0.4; border-left-color:#2a3038;">
         <div class="vtitle" style="color:#7a828a;">第二版 <span class="badge badge-old">历史存档</span></div>
         <div class="vlinks">
@@ -423,7 +476,6 @@
         </div>
     </div>
 
-    <!-- 第一版 -->
     <div class="version-block" style="opacity:0.3; border-left-color:#20262c;">
         <div class="vtitle" style="color:#6a727a;">第一版 <span class="badge badge-old">历史存档</span></div>
         <div class="vlinks">
@@ -437,8 +489,7 @@
 
     <hr class="divider" />
 
-    <!-- ========== GPG 验证 ========== -->
-
+    <!-- ===== GPG 验证 ===== -->
     <div class="field">
         <span class="label">公钥</span>
         <span class="value"><a href="publickey.asc" download>publickey.asc</a></span>
@@ -448,16 +499,13 @@
         <span class="value code">gpg --verify 余篝协议第五版.txt.sig 余篝协议第五版.txt</span>
     </div>
 
-    <!-- ========== 区块链存证记录 ========== -->
-
+    <!-- ===== 存证记录 ===== -->
     <div class="notice">
         <strong>🔗 区块链存证记录（一点存）</strong><br />
         存证ID：<span class="code">627e4b55405348d1b4b0d6f79eb8f1a7</span><br />
         打包哈希值（SHA-256）：<span class="code">6308e2223b9fea611a5af5f42d3c6471a90f83cd4b9fe335740d81c872db3507</span><br />
         存证时间：2026-07-09 · 平台：一点存 · 状态：已存证
     </div>
-
-    <!-- ========== Arweave 去中心化永久存储 ========== -->
 
     <div class="notice notice-arweave">
         <strong>⛓️ Arweave 去中心化永久存储（2026-07-31）</strong><br />
@@ -473,8 +521,6 @@
         </div>
     </div>
 
-    <!-- ========== OpenTimestamps 验证状态 ========== -->
-
     <div class="notice notice-ots">
         <strong>📌 OpenTimestamps 验证状态</strong><br />
         所有核心文件的哈希值已提交至 OpenTimestamps 服务，并获得时间戳确认（基于比特币区块链）。<br />
@@ -483,8 +529,6 @@
             验证时间：2026-07-31
         </div>
     </div>
-
-    <!-- ========== 文件哈希值清单 ========== -->
 
     <div class="notice" style="border-left-color: #d4a14b; background: #1a1f24;">
         <strong>🔐 文件 SHA-256 哈希值（逐文件）</strong><br />
@@ -496,8 +540,7 @@
         </ul>
     </div>
 
-    <!-- ========== .ots 时间戳证明文件下载 + 验证方法 ========== -->
-
+    <!-- ===== .ots 下载 + 验证指引 ===== -->
     <div class="notice notice-download">
         <strong>📎 比特币时间戳证明文件（.ots）</strong><br />
         以下文件记录了每个版本文件哈希被锚定到比特币区块链的时间戳证明，可自行下载验证。<br />
@@ -507,7 +550,6 @@
             <li><span class="ol-label">补充文件：</span><span class="ol-link"><a href="ots/补充文件.ots" download>补充文件.ots</a></span></li>
             <li><span class="ol-label">终局文件：</span><span class="ol-link"><a href="ots/终局文件.ots" download>终局文件.ots</a></span></li>
         </ul>
-
         <div class="verify-steps">
             <strong>🔍 验证方法（三步完成）</strong>
             <ol>
@@ -522,8 +564,7 @@
         </div>
     </div>
 
-    <!-- ========== IPFS 存证 ========== -->
-
+    <!-- ===== IPFS 存证 ===== -->
     <div class="notice notice-ipfs">
         <strong>📦 IPFS 去中心化存证（2026-07-30 补充）</strong><br />
         本协议所有文件已上传至 IPFS 网络，通过以下 CID 可永久访问：<br />
@@ -534,8 +575,7 @@
 
     <hr class="divider" />
 
-    <!-- ========== 外部链接 ========== -->
-
+    <!-- ===== 外部链接 ===== -->
     <div style="margin: 1rem 0 0.5rem 0;">
         <div class="field"><span class="label">背景猜想</span><span class="value"><a href="https://www.douban.com/topic/493219152/" target="_blank">豆瓣</a></span></div>
         <div class="field"><span class="label">协议主站</span><span class="value"><a href="https://cinderspark-yugou.github.io/-Cinderspark-Protocol-v1-/" target="_blank">GitHub Pages</a></span></div>
