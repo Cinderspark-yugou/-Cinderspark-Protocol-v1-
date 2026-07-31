@@ -261,6 +261,23 @@
             transition: border-color 0.2s;
         }
         .ots-download-list .ol-link a:hover { border-bottom-color: #d4a14b; }
+        .verify-steps {
+            margin-top: 0.8rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid #252a30;
+            font-size: 0.9rem;
+            color: #c8cdd3;
+        }
+        .verify-steps ol {
+            margin: 0.3rem 0 0 1.2rem;
+            padding: 0;
+        }
+        .verify-steps ol li {
+            margin-bottom: 0.2rem;
+        }
+        .verify-steps .highlight {
+            color: #8bc34a;
+        }
         @media (max-width: 600px) {
             .container { padding: 1.5rem 1rem; }
             h1 { font-size: 1.6rem; }
@@ -479,19 +496,29 @@
         </ul>
     </div>
 
-    <!-- ========== .ots 时间戳证明文件下载 ========== -->
+    <!-- ========== .ots 时间戳证明文件下载 + 验证方法 ========== -->
 
     <div class="notice notice-download">
         <strong>📎 比特币时间戳证明文件（.ots）</strong><br />
         以下文件记录了每个版本文件哈希被锚定到比特币区块链的时间戳证明，可自行下载验证。<br />
         <ul class="ots-download-list">
-            <li><span class="ol-label">第一版：</span><span class="ol-link"><a href="ots/protocol.txt.ots" download>第一版.ots</a></span></li>
-            <li><span class="ol-label">第五版：</span><span class="ol-link"><a href="ots/余篝协议第五版.txt.ots" download>第五版.ots</a></span></li>
-            <li><span class="ol-label">补充文件：</span><span class="ol-link"><a href="ots/第五版补充文件.txt.ots" download>补充文件.ots</a></span></li>
-            <li><span class="ol-label">终局文件：</span><span class="ol-link"><a href="ots/从几何宇宙到文明终局.txt.ots" download>终局文件.ots</a></span></li>
+            <li><span class="ol-label">第一版：</span><span class="ol-link"><a href="ots/第一版.ots" download>第一版.ots</a></span></li>
+            <li><span class="ol-label">第五版：</span><span class="ol-link"><a href="ots/第五版.ots" download>第五版.ots</a></span></li>
+            <li><span class="ol-label">补充文件：</span><span class="ol-link"><a href="ots/补充文件.ots" download>补充文件.ots</a></span></li>
+            <li><span class="ol-label">终局文件：</span><span class="ol-link"><a href="ots/终局文件.ots" download>终局文件.ots</a></span></li>
         </ul>
-        <div style="margin-top:0.5rem; font-size:0.85rem; color:#9aa2ac;">
-            🔍 验证方法：访问 <a href="https://opentimestamps.org/" target="_blank">opentimestamps.org</a>，将 .ots 文件拖入页面即可验证。
+
+        <div class="verify-steps">
+            <strong>🔍 验证方法（三步完成）</strong>
+            <ol>
+                <li>下载对应版本的 <code>.ots</code> 文件（如上链接）。</li>
+                <li>访问 <a href="https://opentimestamps.org/" target="_blank">opentimestamps.org</a>（OpenTimestamps 官网）。</li>
+                <li>将下载的 <code>.ots</code> 文件拖拽至页面中的虚线框内，等待验证完成。</li>
+            </ol>
+            <div style="margin-top:0.5rem; font-size:0.9rem; color:#9aa2ac;">
+                ✅ 验证成功将显示 <span style="color:#8bc34a;">"Stamped SHA256 hash: [哈希值]"</span>，<br />
+                请与上方“文件哈希值清单”中的对应哈希值进行比对，一致即证明文件在比特币区块时间戳下真实存在且未被篡改。
+            </div>
         </div>
     </div>
 
